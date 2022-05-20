@@ -26,8 +26,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/microsoft/hivedscheduler/pkg/api"
-	"github.com/microsoft/hivedscheduler/pkg/common"
+	"../api"
+	"../common"
 )
 
 // internal wrapper for spec cellTypes

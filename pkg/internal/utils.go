@@ -27,8 +27,8 @@ import (
 	"net/http"
 	"strings"
 
-	si "github.com/microsoft/hivedscheduler/pkg/api"
-	"github.com/microsoft/hivedscheduler/pkg/common"
+	si "../api"
+	"../common"
 	core "k8s.io/api/core/v1"
 	meta "k8s.io/apimachinery/pkg/apis/meta/v1"
 	kubeClient "k8s.io/client-go/kubernetes"

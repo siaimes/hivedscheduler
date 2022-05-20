@@ -25,7 +25,7 @@ package algorithm
 import (
 	"fmt"
 
-	"github.com/microsoft/hivedscheduler/pkg/api"
+	"../api"
 	"k8s.io/klog"
 )
 

@@ -23,7 +23,7 @@
 package algorithm
 
 import (
-	"github.com/microsoft/hivedscheduler/pkg/api"
+	"../api"
 	"math"
 )
 

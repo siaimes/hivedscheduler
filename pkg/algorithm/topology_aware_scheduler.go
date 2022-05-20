@@ -26,8 +26,8 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/microsoft/hivedscheduler/pkg/api"
-	"github.com/microsoft/hivedscheduler/pkg/common"
+	"../api"
+	"../common"
 )
 
 // topologyAwareScheduler can schedule a set of pods on a cluster view.

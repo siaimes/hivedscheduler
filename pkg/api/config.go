@@ -28,8 +28,8 @@ import (
 	"os"
 	"reflect"
 
+	"../common"
 	"github.com/fsnotify/fsnotify"
-	"github.com/microsoft/hivedscheduler/pkg/common"
 	"github.com/spf13/viper"
 	"k8s.io/client-go/rest"
 	"k8s.io/client-go/tools/clientcmd"

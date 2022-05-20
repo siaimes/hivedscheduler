@@ -28,9 +28,9 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/microsoft/hivedscheduler/pkg/api"
-	"github.com/microsoft/hivedscheduler/pkg/common"
-	"github.com/microsoft/hivedscheduler/pkg/internal"
+	"../api"
+	"../common"
+	"../internal"
 	core "k8s.io/api/core/v1"
 	meta "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/types"

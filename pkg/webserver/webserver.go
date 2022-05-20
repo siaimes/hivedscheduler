@@ -23,12 +23,12 @@
 package webserver
 
 import (
+	si "../api"
+	"../common"
+	"../internal"
 	"context"
 	"encoding/json"
 	"fmt"
-	si "github.com/microsoft/hivedscheduler/pkg/api"
-	"github.com/microsoft/hivedscheduler/pkg/common"
-	"github.com/microsoft/hivedscheduler/pkg/internal"
 	"k8s.io/apimachinery/pkg/types"
 	"k8s.io/klog"
 	ei "k8s.io/kubernetes/pkg/scheduler/api"

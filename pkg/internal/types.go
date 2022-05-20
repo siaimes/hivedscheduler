@@ -23,8 +23,8 @@
 package internal
 
 import (
+	si "../api"
 	"fmt"
-	si "github.com/microsoft/hivedscheduler/pkg/api"
 	core "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/types"
 	ei "k8s.io/kubernetes/pkg/scheduler/api"
