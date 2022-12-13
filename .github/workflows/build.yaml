@@ -1,17 +1,11 @@
 name: build
 
-on:
-  push:
-    branches:
-    - master
-  pull_request:
-    branches:
-    - master
+on: [push]
 
 jobs:
   build:
     name: Build and Test
-    runs-on: ubuntu-16.04
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - run: build/hivedscheduler/docker-build.sh test
@@ -21,13 +15,10 @@ jobs:
     strategy:
       matrix:
         go: [1.12.6]
-        os: [ubuntu-16.04]
+        os: [ubuntu-latest]
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-      with:
-        ref: ${{ github.event.pull_request.head.sha }}
-        path: src/github.com/${{ github.repository }}
     - name: Setup go ${{ matrix.go }}
       uses: actions/setup-go@v2
       with:
@@ -35,12 +26,11 @@ jobs:
     - name: Setup GOPATH
       run: echo "GOPATH=${{ github.workspace }}" >> $GITHUB_ENV
     - name: Go test
-      working-directory: src/github.com/${{ github.repository }}
+      working-directory: .
       run: go test -race -covermode=atomic -coverprofile=$GOPATH/coverage.txt ./...
     - name: Report coverage
       uses: codecov/codecov-action@v1
       with:
-        token: ${{ secrets.CODECOV_TOKEN }}
         file: ${{ github.workspace }}/coverage.txt
         flags: unittests
         name: codecov-go${{ matrix.go }}-${{ matrix.os }}
